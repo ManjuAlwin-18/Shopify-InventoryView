@@ -1,0 +1,32 @@
+<h1>Hello, world!</h1>
+<p>Welcome to your new single-page application, built with:</p>
+
+<div id="container">
+  <div *ngIf="inventory">
+    <h2>Inventory</h2>
+    
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Product</th>
+          <th scope="col">Variant</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Delta</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of inventory">
+          <td>{{item.id}}</td>
+          <td>{{item.producttitle}}</td>
+          <td>{{item.varianttitle}}</td>
+          <td>{{item.amount}}</td>
+          <td>
+            
+            {{item.delta}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
